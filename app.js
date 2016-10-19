@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const appPort = 11235;
+const appPort = process.env.port || 8080;
 
 // legacy blog post, redirect to tumblr
 app.get('/post/*', function(req, res) {
