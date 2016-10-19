@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var appPort = process.env.port || 8080;
+var appPort = process.env.port || 5000;
 
 // legacy blog post, redirect to tumblr
 app.get('/post/*', function(req, res) {
