@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var appPort = process.env.port || 5000;
 
+app.use(express.static('public'));
+
 // legacy blog post, redirect to tumblr
 app.get('/post/*', function(req, res) {
   var tumblrBaseUrl = "https://barkleymoonshot.tumblr.com";
